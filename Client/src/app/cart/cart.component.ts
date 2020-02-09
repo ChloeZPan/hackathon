@@ -16,6 +16,16 @@ export class CartComponent implements OnInit, OnDestroy {
   pass = '123';
   barcode = '7789040795';
   currentItem = false;
+  amount = 1;
+  list = [
+  //   {
+  //   image: 'IMAGE',
+  //   name: 'NAME',
+  //   ingre: 'CONSUMER',
+  //   amount: 'AMOUNT',
+  //   friend: 'SPLIT W/ FRIEND'
+  // }
+];
   itemLike = false;
   graph = {
     data: [
@@ -46,6 +56,18 @@ export class CartComponent implements OnInit, OnDestroy {
 
   reset(){
     this.currentItem = false;
+  }
+
+  add(){
+    this.list.push({
+      image: this.currentItem['tradeIdentifiers'][0].images[0],
+      name: this.currentItem['name'],
+      ingre: this.currentItem['descriptions']['consumer'],
+      amount: this.amount,
+      friend: false
+    });
+    this.reset();
+    console.log(this.amount, this.list);
   }
   ngOnInit() {
 

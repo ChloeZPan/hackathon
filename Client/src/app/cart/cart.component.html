@@ -55,13 +55,14 @@
                           id="amount"
                           class="form-control"
                           name="amount"
-                          ngModel
-                          required
                           pattern="^[1-9]+[0-9]*$"
+                          [(ngModel)]='amount'
                         >
-                
+
                         <button
+                        [disabled] = '!currentItem'
                         class="  btn btn-success"
+                        (click)='add()'
                         type="submit"
                         >Add</button>
                       </div>
@@ -93,4 +94,33 @@
                   </div>
         
               </div>
+
+       <br/><br/>
+       <h1>Cart List</h1>
+       <div *ngFor='let elt of list'>
+           <div class="row">
+                <div class= 'col-sm-3'>
+                        <img 
+                        [src]="elt.image"
+                        alt="name"
+                        class="img-responsive"
+                        style="max-height: 80px;">
+                </div>
+                <div class= 'col-sm-3'>
+                    {{elt.name}}
+                </div>
+                <div class= 'col-sm-3'>
+                    {{elt.ingre}}
+                </div>
+                <div class= 'col-sm-3'>
+                        {{elt.amount}}
+                 </div>
+                 <div class= 'col-sm-3'>
+                    <div *ngIf="!elt.friend" class='bluefont' (click)="elt.friend=!elt.friend">Split</div>
+                    <div *ngIf="elt.friend"  class='redfont' (click)="elt.friend=!elt.friend">Own</div>
+                </div>
+                
+           </div>
+       </div>
+
 </div>
