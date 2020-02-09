@@ -6,6 +6,9 @@
 - **MongoDb**  
 - **Flask / py 3.7**  
 
+# other need to install
+- npm install --save bootstrap@3
+
 
 # Git Command
 limted use, may lose everything on local using `git reset --hard HEAD` [Carefully]
