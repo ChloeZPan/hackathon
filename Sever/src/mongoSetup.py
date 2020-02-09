@@ -17,6 +17,7 @@ def getBarDetailsWag(barcode):
     sku = data['sku']
     return getSkuDetailsWag(sku)
 
+
 def getSkuDetailsWag (sku):
     url = 'https://api.wegmans.io/products/' + str(sku) + '?api-version=2018-10-18&Subscription-Key=f4b73d1e12c7417fad1b5a2d0cd58617'
     receive = requests.get(url=url)
