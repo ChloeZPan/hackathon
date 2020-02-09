@@ -116,11 +116,29 @@
                         {{elt.amount}}
                  </div>
                  <div class= 'col-sm-3'>
-                    <div *ngIf="!elt.friend" class='bluefont' (click)="elt.friend=!elt.friend">Split</div>
-                    <div *ngIf="elt.friend"  class='redfont' (click)="elt.friend=!elt.friend">Own</div>
+                    <div *ngIf="!elt.friend" class='bluefont' (click)="elt.friend=!elt.friend">Own</div>
+                    <div *ngIf="elt.friend"  class='redfont' (click)="elt.friend=!elt.friend">Split</div>
                 </div>
                 
            </div>
        </div>
+       
+            <button
+            class="btn btn-success"
+            type="submit"
+            (click) = "calulateSplit()">Calculate</button>
+            
+            <div *ngIf="calulateDone">
+                    Send Split Details to 
+                    <a href = "mailto:{{people.friendEmail}}?subject = Feedback&body = Message">
+                         {{people.friendEmail}}
+                    </a>
+            </div>
+
+            <button
+            class="btn btn-danger"
+            type="submit"
+            (click) = "returnSplit()">Return</button>
+       
 
 </div>

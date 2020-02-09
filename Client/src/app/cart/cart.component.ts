@@ -17,6 +17,7 @@ export class CartComponent implements OnInit, OnDestroy {
   barcode = '7789040795';
   currentItem = false;
   amount = 1;
+  calulateDone = false;
   list = [
   //   {
   //   image: 'IMAGE',
@@ -69,6 +70,16 @@ export class CartComponent implements OnInit, OnDestroy {
     this.reset();
     console.log(this.amount, this.list);
   }
+
+  calulateSplit(){
+    this.calulateDone = true;
+
+  }
+
+  returnSplit() {
+    this.calulateDone = false;
+  }
+
   ngOnInit() {
 
   }
