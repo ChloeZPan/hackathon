@@ -100,7 +100,10 @@
        <div *ngFor='let elt of list'>
            <div class="row">
                 <div class= 'col-sm-3'>
-                        <img 
+                        <div *ngIf="elt.image=='IMAGE'">
+                            {{elt.image}}
+                        </div>
+                        <img *ngIf="elt.image!='IMAGE'"
                         [src]="elt.image"
                         alt="name"
                         class="img-responsive"
@@ -116,29 +119,33 @@
                         {{elt.amount}}
                  </div>
                  <div class= 'col-sm-3'>
-                    <div *ngIf="!elt.friend" class='bluefont' (click)="elt.friend=!elt.friend">Own</div>
-                    <div *ngIf="elt.friend"  class='redfont' (click)="elt.friend=!elt.friend">Split</div>
+                    <div *ngIf="elt.friend=='false'" class='bluefont' (click)="elt.friend='true'">Own</div>
+                    <div *ngIf="elt.friend=='true'"  class='redfont' (click)="elt.friend='false'">Split</div>
                 </div>
-                
+                <br/><br/>
            </div>
        </div>
        
-            <button
+       <div>
+           <br/>
+            <button *ngIf='!calulateDone'
             class="btn btn-success"
             type="submit"
             (click) = "calulateSplit()">Calculate</button>
-            
+            <br/>
             <div *ngIf="calulateDone">
                     Send Split Details to 
                     <a href = "mailto:{{people.friendEmail}}?subject = Feedback&body = Message">
                          {{people.friendEmail}}
                     </a>
             </div>
-
-            <button
+            <br/>
+            <button *ngIf='calulateDone'
             class="btn btn-danger"
             type="submit"
             (click) = "returnSplit()">Return</button>
+       </div>
+
        
 
 </div>

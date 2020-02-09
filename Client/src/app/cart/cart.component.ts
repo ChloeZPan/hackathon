@@ -19,13 +19,13 @@ export class CartComponent implements OnInit, OnDestroy {
   amount = 1;
   calulateDone = false;
   list = [
-  //   {
-  //   image: 'IMAGE',
-  //   name: 'NAME',
-  //   ingre: 'CONSUMER',
-  //   amount: 'AMOUNT',
-  //   friend: 'SPLIT W/ FRIEND'
-  // }
+    {
+    'image': 'IMAGE',
+    'name': 'NAME',
+    'ingre': 'CONSUMER',
+    'amount': 'AMOUNT',
+    'friend': 'SPLIT W/ FRIEND'
+  }
 ];
   itemLike = false;
   graph = {
@@ -64,8 +64,8 @@ export class CartComponent implements OnInit, OnDestroy {
       image: this.currentItem['tradeIdentifiers'][0].images[0],
       name: this.currentItem['name'],
       ingre: this.currentItem['descriptions']['consumer'],
-      amount: this.amount,
-      friend: false
+      amount: this.amount.toString(),
+      friend: "false"
     });
     this.reset();
     console.log(this.amount, this.list);
