@@ -11,15 +11,15 @@ export class GraphComponent implements OnInit, OnDestroy {
     data: [
       {
       type: 'scatterpolar',
-      r: [39, 28, 8, 7, 28, 39],
-      theta: ['A','B','C', 'D', 'E', 'A'],
+      r: [39, 28, 8, 7, 28],
+      theta: ['Proteini','Cholesterol','Dietary Fiber', 'Carbohydrate', 'Total Fat'],
       fill: 'toself',
       name: 'Shopping list'
       },
       {
       type: 'scatterpolar',
-      r: [1.5, 10, 39, 31, 15, 1.5],
-      theta: ['A','B','C', 'D', 'E', 'A'],
+      r: [1.5, 10, 39, 31, 15],
+      theta: ['Proteini','Cholesterol','Dietary Fiber', 'Carbohydrate', 'Total Fat'],
       fill: 'toself',
       name: 'Reciept'
       }
@@ -40,15 +40,15 @@ export class GraphComponent implements OnInit, OnDestroy {
       data: [
         {
         type: 'scatterpolar',
-        r: [39, 28, 8, 7, 28, 39],
-        theta: ['A','B','C', 'D', 'E', 'A'],
+        r: [39, 28, 8, 7, 28],
+        theta: ['Calcium','Sodium','Iron', 'Potassium', 'Zinc'],
         fill: 'toself',
         name: 'Shopping list'
         },
         {
         type: 'scatterpolar',
         r: [1.5, 10, 39, 31, 15, 1.5],
-        theta: ['A','B','C', 'D', 'E', 'A'],
+        theta: ['Calcium','Sodium','Iron', 'Potassium', 'Zinc'],
         fill: 'toself',
         name: 'Reciept'
         }
@@ -69,15 +69,15 @@ export class GraphComponent implements OnInit, OnDestroy {
         data: [
           {
           type: 'scatterpolar',
-          r: [39, 28, 8, 7, 28, 39],
-          theta: ['A','B','C', 'D', 'E', 'A'],
+          r: [39, 28, 8],
+          theta: ['Vitamin-A','Vitamin-C','Vitamin-D'],
           fill: 'toself',
           name: 'Shopping list'
           },
           {
           type: 'scatterpolar',
-          r: [1.5, 10, 39, 31, 15, 1.5],
-          theta: ['A','B','C', 'D', 'E', 'A'],
+          r: [1.5, 10, 39],
+          theta:['Vitamin-A','Vitamin-C','Vitamin-D'],
           fill: 'toself',
           name: 'Reciept'
           }

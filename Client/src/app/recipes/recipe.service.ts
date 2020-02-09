@@ -17,13 +17,57 @@ export class RecipeService {
       new Ingredient('Mushroom', 2),
       new Ingredient('Chicken', 1)
     ]),
-    new Recipe('Big Fat Burger',
-      'What else you need to say?',
-      'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+    new Recipe('Classic Goulash',
+      'super good',
+      'https://images.media-allrecipes.com/userphotos/720x405/1108799.jpg',
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
-      ])
+      ]),
+
+      new Recipe('Lemon-Blueberry Pancakes',
+      'IronChefLaurie\'s favoirte',
+      'https://images.media-allrecipes.com/userphotos/720x405/7383694.jpg',
+      [
+        new Ingredient('flour', 1),
+        new Ingredient('egg', 2),
+        new Ingredient('lemon', 2)
+      ]),
+      new Recipe('Italian Wedding Soup',
+        'Happy wedding',
+        'https://images.media-allrecipes.com/userphotos/720x405/6414064.jpg',
+        [
+          new Ingredient('pasta', 1),
+          new Ingredient('chicken broth', 1),
+          new Ingredient('spinach', 6)
+        ]),
+
+        new Recipe('Smothered Cabbage',
+        'Sandra Garth',
+        'https://images.media-allrecipes.com/userphotos/720x405/6062348.jpg',
+        [
+          new Ingredient('cabbage', 1),
+          new Ingredient('pepper', 1),
+          new Ingredient('chicken', 2)
+        ]),
+
+        new Recipe('Blooming Onion and Dipping Sauce',
+        'Jackie Smith',
+        'https://images.media-allrecipes.com/userphotos/720x405/5450287.jpg',
+        [
+          new Ingredient('flour', 1),
+          new Ingredient('pepper', 1),
+          new Ingredient('salt', 2)
+        ]),
+
+        new Recipe('Beef Pot Pie III',
+        'Stephanie',
+        'https://images.media-allrecipes.com/userphotos/720x405/2987719.jpg',
+        [
+          new Ingredient('flour', 1),
+          new Ingredient('potato', 2),
+          new Ingredient('egg', 2)
+        ])
 
 
   ];
