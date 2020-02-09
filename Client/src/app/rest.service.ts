@@ -38,6 +38,10 @@ export class RestService {
     return this.http.get(endpoint + 'CreateProfile/'+ param, httpOptions);
   }
 
+  getPeople(name): Observable<any> {
+    return this.http.get(endpoint + 'getPeople/'+ name, httpOptions);
+  }
+
 
 
 }

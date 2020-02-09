@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
   profile = {
     email: 'email@email',
+    friendEmail: '1@1',
     password: '123',
     name: 'default', 
     health: {
@@ -37,6 +38,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
   ngOnInit() {
     // this.rest.getProducts();
+    console.log(this.profile);
     this.rest.getProducts('7789047517').subscribe((data) => {
       console.log(data);
       // this.products = data;

@@ -11,6 +11,9 @@ export class CartComponent implements OnInit, OnDestroy {
 
   constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
 
+  people = false;
+  name = 'default';
+  pass = '123';
   barcode = '7789040795';
   currentItem = false;
   itemLike = false;
@@ -21,6 +24,16 @@ export class CartComponent implements OnInit, OnDestroy {
     ],
     layout: {width: 320, height: 240, title: 'A Fancy Plot'}
 };
+
+  validate() {
+    console.log(this.name, this.pass);
+    this.rest.getPeople(this.name).subscribe((data) =>{
+      console.log('get People Data', data);
+      if (this.pass === data.password){
+        this.people = data;
+      }
+    })
+  }
 
   search() {
     console.log(this.barcode);

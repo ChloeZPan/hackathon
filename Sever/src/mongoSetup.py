@@ -40,6 +40,22 @@ def createProfile(data):
 
     return {"status":"done"}
 
+def getfood(name):
+    mydb = mongo_init()
+    print (name)
+    result = mydb['Goods'].find_one({'name': name})
+    del result['_id']
+    return result
+
+def getPeople(name):
+    mydb = mongo_init()
+    print (name)
+    result = mydb['Peoples'].find_one({'name': name})
+    if result != None:
+        del result['_id']
+    else:
+        result = {'error': True}
+    return result
 
 
 

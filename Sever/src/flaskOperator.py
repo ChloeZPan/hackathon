@@ -21,6 +21,9 @@ def createProfile(param):
     return mongo.createProfile(param)
     # return param
 
+@app.route('/getPeople/<name>')
+def getPeople(name):
+    return mongo.getPeople(name)
 
 
 
