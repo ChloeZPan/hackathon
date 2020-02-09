@@ -18,8 +18,19 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipes/recipe.service';
 
+import { GraphComponent } from './graph/graph.component';
+import * as PlotlyJS from 'plotly.js/dist/plotly.js';
+import { PlotlyModule } from 'angular-plotly.js';
+
+// PlotlyModule.plotlyjs = PlotlyJS;
+PlotlyModule.plotlyjs = PlotlyJS;
+PlotlyModule.plotlyjs.d3
+.select('.cursor-crosshair')
+.style('cursor', 'default')
+
 @NgModule({
   declarations: [
+    // PlotlyModule,
     AppComponent,
     HeaderComponent,
     RecipesComponent,
@@ -30,9 +41,11 @@ import { RecipeService } from './recipes/recipe.service';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    GraphComponent
   ],
   imports: [
+    PlotlyModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
