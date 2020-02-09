@@ -27,7 +27,8 @@ export class ProfileComponent implements OnInit, OnDestroy {
     name: 'default', 
     health: {
       age: '23',
-      height: '177'
+      height: '177',
+      allergy: ''
     }
   }
 

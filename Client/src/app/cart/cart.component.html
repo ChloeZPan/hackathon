@@ -97,6 +97,7 @@
 
        <br/><br/>
        <h1>Cart List</h1>
+       <!-- <div *ngIf=> </div> -->
        <div *ngFor='let elt of list'>
            <div class="row">
                 <div class= 'col-sm-3'>
@@ -119,6 +120,7 @@
                         {{elt.amount}}
                  </div>
                  <div class= 'col-sm-3'>
+                    <div *ngIf="elt.image=='SPLIT W/ FRIEND'">{{elt.friend}}</div>
                     <div *ngIf="elt.friend=='false'" class='bluefont' (click)="elt.friend='true'">Own</div>
                     <div *ngIf="elt.friend=='true'"  class='redfont' (click)="elt.friend='false'">Split</div>
                 </div>
