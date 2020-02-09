@@ -19,8 +19,10 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { RecipeService } from './recipes/recipe.service';
 
 import { GraphComponent } from './graph/graph.component';
+import { ProfileComponent } from './profile/profile.component';
 import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
+import { HttpClientModule } from '@angular/common/http';
 
 // PlotlyModule.plotlyjs = PlotlyJS;
 PlotlyModule.plotlyjs = PlotlyJS;
@@ -42,14 +44,16 @@ PlotlyModule.plotlyjs.d3
     DropdownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
-    GraphComponent
+    GraphComponent,
+    ProfileComponent
   ],
   imports: [
     PlotlyModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]

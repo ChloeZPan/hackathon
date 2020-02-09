@@ -3,8 +3,9 @@
 # environment
 - **Node / npm**  
 - **Angular**  
-- **MongoDb**  
+- **MongoDb**  mongo 3t
 - **Flask / py 3.7**  
+- https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US
 
 # other need to install
 - npm install --save bootstrap@3
