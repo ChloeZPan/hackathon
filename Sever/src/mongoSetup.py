@@ -36,11 +36,11 @@ def getSkuDetailsWag (sku = 47517):
 
 
 
-def main():
-    mydb = mongo_init()
-    # mydb['test'].insert({'test': 'test'})
-    data = getBarDetailsWag('7789040794')
-    # print(data)
-    mydb['Goods'].insert(data)
+# def main():
+#     mydb = mongo_init()
+#     # mydb['test'].insert({'test': 'test'})
+#     data = getBarDetailsWag('7789040794')
+#     # print(data)
+#     mydb['Goods'].insert(data)
 
-main()
+# main()
