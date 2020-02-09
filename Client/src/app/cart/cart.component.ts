@@ -3,15 +3,17 @@ import { RestService } from '../rest.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.less']
 })
-export class ProfileComponent implements OnInit, OnDestroy {
+export class CartComponent implements OnInit, OnDestroy {
 
   constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
 
-
+  barcode = '7789040795';
+  currentItem = false;
+  itemLike = false;
   graph = {
     data: [
         { x: [1, 2, 3], y: [2, 6, 3], type: 'scatter', mode: 'lines+points', marker: {color: 'red'} },
@@ -20,30 +22,20 @@ export class ProfileComponent implements OnInit, OnDestroy {
     layout: {width: 320, height: 240, title: 'A Fancy Plot'}
 };
 
-  profile = {
-    email: 'email@email',
-    password: '123',
-    name: 'default', 
-    health: {
-      age: '23',
-      height: '177'
-    }
+  search() {
+    console.log(this.barcode);
+    this.rest.getProducts(this.barcode).subscribe((data) => {
+      console.log(data);
+      this.currentItem = data;
+      // console.log(this.currentItem['tradeIdentifiers'].images[0])
+    });
   }
 
-  submit(){
-    this.rest.createProfile(JSON.stringify(this.profile)).subscribe((data) => {
-      console.log(data);
-    });
+  reset(){
+    this.currentItem = false;
   }
   ngOnInit() {
-    // this.rest.getProducts();
-    this.rest.getProducts('7789047517').subscribe((data) => {
-      console.log(data);
-      // this.products = data;
-    });
 
-
-    //  console.log(this.rest.getProducts('i'));
   }
 
 

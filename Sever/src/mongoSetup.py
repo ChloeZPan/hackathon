@@ -9,7 +9,7 @@ def mongo_init(dbName = "zeyi"):
     mydb = myclient[dbName]
     return mydb
 
-def getBarDetailsWag(barcode = '7789047517'):
+def getBarDetailsWag(barcode):
     # need try catch every request
     url = 'https://api.wegmans.io/products/barcodes/' + str(barcode)  + '?api-version=2018-10-18&subscription-key=f4b73d1e12c7417fad1b5a2d0cd58617'
     receive = requests.get(url = url)
@@ -17,7 +17,7 @@ def getBarDetailsWag(barcode = '7789047517'):
     sku = data['sku']
     return getSkuDetailsWag(sku)
 
-def getSkuDetailsWag (sku = 47517):
+def getSkuDetailsWag (sku):
     url = 'https://api.wegmans.io/products/' + str(sku) + '?api-version=2018-10-18&Subscription-Key=f4b73d1e12c7417fad1b5a2d0cd58617'
     receive = requests.get(url=url)
     data = receive.json()

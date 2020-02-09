@@ -1,29 +1,37 @@
-<form class="ui form">
-        <div class="field">
-          <label>Name</label><br/>
-          <input type="text" name="first-name" placeholder="First Name" [(ngModel)]="profile.name">
-        </div>
+<div class='viewer'>
+        <form class="ui form">
+                <div class="field">
+                  <label>Name</label><br/>
+                  <input type="text" name="first-name" placeholder="First Name" [(ngModel)]="profile.name">
+                </div>  
+        
+                <div class="field">
+                  <label>Email</label><br/>
+                  <input type="text" name="email" placeholder="Email" [(ngModel)]="profile.email">
+                </div>
+        
+                <div class="field">
+                  <label>Password</label><br/>
+                  <input type="text" name="password" placeholder="Password" [(ngModel)]="profile.password">
+                </div>
+        
+                <div class="field">
+                  <label>Age</label><br/>
+                  <input type="text" name="age" placeholder="Age" [(ngModel)]="profile.health.age">
+                </div>
+        
+                <div class="field">
+                  <label>Height</label><br/>
+                  <input type="text" name="age" placeholder="Height" [(ngModel)]="profile.health.height">
+                </div>
+        
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0">
+                    <label>I agree to the Terms and Conditions</label>
+                  </div>
+                </div> 
+                <button class="ui button" (click)="submit()">Submit</button>
+              </form>
 
-        <div class="field">
-          <label>Email</label><br/>
-          <input type="text" name="email" placeholder="Email" [(ngModel)]="profile.email">
-        </div>
-
-        <div class="field">
-          <label>Password</label><br/>
-          <input type="text" name="password" placeholder="Password" [(ngModel)]="profile.password">
-        </div>
-
-        <div class="field">
-          <label>Age</label><br/>
-          <input type="text" name="age" placeholder="Age" [(ngModel)]="profile.age">
-        </div>
-
-        <div class="field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" >
-            <label>I agree to the Terms and Conditions</label>
-          </div>
-        </div>
-        <button class="ui button" (click)="submit()">Submit</button>
-      </form>
+</div>

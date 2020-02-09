@@ -1,0 +1,67 @@
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<div class="row">
+        <div class="col-sm-5 form-group">
+                <label for="name">BarCode</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  name="name"
+                  (keyup) = "reset()"
+                  [(ngModel)]="barcode" 
+                >
+              
+              <button
+              class="col-sm-3  btn btn-success"
+              type="submit"
+              (click) = "search()">Search</button>
+            </div>
+        <div class="col-sm-3 form-group">
+                <label for="amount">Amount</label>
+                <input
+                  type="number"
+                  id="amount"
+                  class="form-control"
+                  name="amount"
+                  ngModel
+                  required
+                  pattern="^[1-9]+[0-9]*$"
+                >
+        
+                <button
+                class="  btn btn-success"
+                type="submit"
+                >Add</button>
+              </div>
+</div>
+
+      <!-- </div> -->
+<br/><br/><br/>
+      <div *ngIf='currentItem' class = 'row'>
+          <div class = 'col-sm-3'>
+                <img
+                [src]="currentItem.tradeIdentifiers[0].images[0]"
+                alt="name"
+                class="img-responsive"
+                style="max-height: 120px;">
+          </div>
+          <div class = 'col-sm-3'>
+              {{currentItem.name}}<br/> <br/> 
+              {{currentItem.descriptions.consumer}}
+          </div>
+
+          <div class= 'col-sm-3'>
+              {{currentItem.ingredients}}
+          </div>
+
+          <div class='col-sm-3'>
+              <div *ngIf="!itemLike" class='bluefont' (click)="itemLike=!itemLike">Add to Like</div>
+              <div *ngIf="itemLike"  class='redfont' (click)="itemLike=!itemLike">Liked</div>
+              
+          </div>
+
+      </div>

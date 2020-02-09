@@ -12,7 +12,7 @@ def hello():
 
 @app.route('/getDetails/<id>')
 def getDetails(id):
-    return mongo.getBarDetailsWag()
+    return mongo.getBarDetailsWag(id)
 
 
 

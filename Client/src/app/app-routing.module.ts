@@ -8,6 +8,7 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { GraphComponent } from './graph/graph.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   ] },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'graph-info', component: GraphComponent},
-  { path: 'profile-info', component: ProfileComponent}
+  { path: 'profile-info', component: ProfileComponent},
+  { path: 'cart-info', component: CartComponent},
 ];
 
 @NgModule({

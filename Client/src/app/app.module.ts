@@ -20,6 +20,7 @@ import { RecipeService } from './recipes/recipe.service';
 
 import { GraphComponent } from './graph/graph.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
 import * as PlotlyJS from 'plotly.js/dist/plotly.js';
 import { PlotlyModule } from 'angular-plotly.js';
 import { HttpClientModule } from '@angular/common/http';
@@ -45,7 +46,8 @@ PlotlyModule.plotlyjs.d3
     RecipeStartComponent,
     RecipeEditComponent,
     GraphComponent,
-    ProfileComponent
+    ProfileComponent,
+    CartComponent
   ],
   imports: [
     PlotlyModule,
