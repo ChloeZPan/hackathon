@@ -18,6 +18,7 @@ export class CartComponent implements OnInit, OnDestroy {
   currentItem = false;
   amount = 1;
   calulateDone = false;
+  isAllergy = false;
   list = [
     {
     'image': 'IMAGE',
@@ -50,6 +51,10 @@ export class CartComponent implements OnInit, OnDestroy {
     console.log(this.barcode);
     this.rest.getProducts(this.barcode).subscribe((data) => {
       console.log(data);
+      if (this.people['health']['allergy'].length > 0 && data.ingredients[0].toLowerCase().includes(this.people['health']['allergy'].toLowerCase())){
+        console.log('FOUNDDDDDDDD allergy!!!!!!!!!');
+        this.isAllergy = true; 
+      }
       this.currentItem = data;
       // console.log(this.currentItem['tradeIdentifiers'].images[0])
     });

@@ -60,7 +60,7 @@
                         >
 
                         <button
-                        [disabled] = '!currentItem'
+                        [disabled] = '!currentItem || isAllergy'
                         class="  btn btn-success"
                         (click)='add()'
                         type="submit"
@@ -70,6 +70,12 @@
         
               <!-- </div> -->
         <br/><br/><br/>
+        <p class="redfont" *ngIf="isAllergy">
+                <!-- <ngb-alert [dismissible]="isAllergy">
+                  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                </ngb-alert> -->
+                Warning, you got an allergy item {{people.health.allergy}}
+              </p>
               <div *ngIf='currentItem' class = 'row'>
                   <div class = 'col-sm-3'>
                         <img
