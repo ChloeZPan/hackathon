@@ -1,5 +1,7 @@
 # Stay Hungry. Stay Foolish.
 
+# https://docs.google.com/document/d/1Rcm6dNO1JvgiYQsXhMQOAhlFk7V3m2Z5UzfqU4kHrg8/edit?usp=sharing
+
 # environment
 - **Node / npm**  
 - **Angular**  
