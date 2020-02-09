@@ -30,8 +30,14 @@ export class RestService {
   //   }
   // }
 
-  getProducts(): Observable<any> {
-    return this.http.get(endpoint + 'getDetails/7789047517', httpOptions);
+  getProducts(id): Observable<any> {
+    return this.http.get(endpoint + 'getDetails/'+ id, httpOptions);
   }
+
+  createProfile(param): Observable<any> {
+    return this.http.get(endpoint + 'CreateProfile/'+ param, httpOptions);
+  }
+
+
 
 }

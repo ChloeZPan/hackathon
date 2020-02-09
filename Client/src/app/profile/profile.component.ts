@@ -20,12 +20,26 @@ export class ProfileComponent implements OnInit, OnDestroy {
     layout: {width: 320, height: 240, title: 'A Fancy Plot'}
 };
 
+  profile = {
+    email: 'email@email',
+    password: '123',
+    name: 'default', 
+    age: '23', 
+  }
+
+  submit(){
+    this.rest.createProfile(JSON.stringify(this.profile)).subscribe((data) => {
+      console.log(data);
+    });
+  }
   ngOnInit() {
     // this.rest.getProducts();
-    this.rest.getProducts().subscribe((data) => {
+    this.rest.getProducts('7789047517').subscribe((data) => {
       console.log(data);
       // this.products = data;
     });
+
+
     //  console.log(this.rest.getProducts('i'));
   }
 

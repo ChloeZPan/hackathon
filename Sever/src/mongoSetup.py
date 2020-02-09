@@ -32,6 +32,14 @@ def getSkuDetailsWag (sku = 47517):
     # }
     return data
 
+def createProfile(data):
+    mydb = mongo_init()
+    parseData = json.loads(data)
+    mydb['test'].insert({'test': 'test'})
+    mydb['Peoples'].insert(parseData)
+
+    return {"status":"done"}
+
 
 
 

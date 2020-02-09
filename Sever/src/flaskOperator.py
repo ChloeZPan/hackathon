@@ -13,7 +13,16 @@ def hello():
 @app.route('/getDetails/<id>')
 def getDetails(id):
     return mongo.getBarDetailsWag()
-    # return id
+
+
+
+@app.route('/CreateProfile/<param>')
+def createProfile(param):
+    return mongo.createProfile(param)
+    # return param
+
+
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

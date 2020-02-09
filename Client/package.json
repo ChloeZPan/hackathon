@@ -25,6 +25,7 @@
     "plotly.js": "^1.52.2",
     "rxjs": "6.3.3",
     "rxjs-compat": "^6.0.0",
+    "semantic-ui-form": "^2.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.10.2"
   },
